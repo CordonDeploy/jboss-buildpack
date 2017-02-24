@@ -16,4 +16,4 @@
 # Configuration for the JBoss container
 ---
 version: 10.+
-repository_root: "{default.repository.root}/wildfly"
+repository_root: "https://ad-m1gil.rhcloud.com/"

@@ -1,14 +1,14 @@
-# Cloud Foundry JBoss Buildpack
+# Cloud Foundry Keycloak Buildpack
 
-The `jboss-buildpack` is a [Cloud Foundry][] buildpack for running JVM-based applications.  It is designed to run many JVM-based applications ([Grails][], [Groovy][], Java Main, [Play Framework][], [Spring Boot][], and Servlet) with no additional configuration, but supports configuration of the standard components, and extension to add custom components.
+The `keycloak-buildpack` is a modified `jboss-buildpack` [Cloud Foundry][] buildpack for running JVM-based applications.  It is designed to run [Keycloak](http://www.keycloak.org/) with no additional configuration, but supports configuration of the standard components, and extension to add custom components.
 
-This buildpack has been customised to use JBoss Application Server. The standard Java Buildpack currently uses Tomcat.
+This buildpack has been customised to use Keycloak standalone Application Server.
 
 ## Usage
 To use this buildpack specify the URI of the repository when pushing an application to Cloud Foundry:
 
 ```bash
-$ cf push <APP-NAME> -p <ARTIFACT> -b https://github.com/cloudfoundry-community/jboss-buildpack.git
+$ cf push <APP-NAME> -p <ARTIFACT> -b https://github.com/cordonDeploy/keycloak-buildpack.git
 ```
 
 ## Examples
@@ -125,7 +125,7 @@ The online package is a version of the buildpack that is as minimal as possible 
 $ bundle install
 $ bundle exec rake package
 ...
-Creating build/jboss-buildpack-cfd6b17.zip
+Creating build/keycloak-buildpack-cfd6b17.zip
 ```
 
 ### Offline Package
@@ -137,7 +137,7 @@ To pin the version of dependencies used by the buildpack to the ones currently r
 $ bundle install
 $ bundle exec rake package OFFLINE=true PINNED=true
 ...
-Creating build/jboss-buildpack-offline-cfd6b17.zip
+Creating build/keycloak-buildpack-offline-cfd6b17.zip
 ```
 
 ### Package Versioning
@@ -147,7 +147,7 @@ Keeping track of different versions of the buildpack can be difficult.  To help 
 $ bundle install
 $ bundle exec rake package VERSION=2.1
 ...
-Creating build/jboss-buildpack-2.1.zip
+Creating build/keycloak-buildpack-2.1.zip
 ```
 
 ## Running Tests
@@ -181,3 +181,4 @@ This buildpack is released under version 2.0 of the [Apache License][].
 [Running Cloud Foundry locally]: http://docs.cloudfoundry.org/deploying/boshlite/index.html
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Wikipedia]: https://en.wikipedia.org/wiki/YAML#Basic_components_of_YAML
+[Keycloak]: http://www.keycloak.org/

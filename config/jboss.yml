@@ -15,5 +15,5 @@
 
 # Configuration for the JBoss container
 ---
-version: 10.+
+version: 2.+
 repository_root: "https://ad-m1gil.rhcloud.com/"
